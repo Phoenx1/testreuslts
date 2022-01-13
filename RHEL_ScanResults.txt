@@ -1,0 +1,968 @@
+[root@phoenix phoenix]# horusec start -p="/home/phoenix/samplecode/testkotlin/samples-kotlin" --log-level=debug --information-severity=true
+DEBU[0000] {HORUSEC_CLI} Config file running on path: /home/phoenix/horusec-config.json 
+WARN[0000] {HORUSEC_CLI} Config file not found          
+DEBU[0000] Set log file to /tmp/horusec-2022-01-13-11-38-45.log 
+DEBU[0000] {HORUSEC_CLI} The current configuration for this analysis are:{
+  "is_timeout": false,
+  "log_level": "debug",
+  "config_file_path": "/home/phoenix/horusec-config.json",
+  "log_file_path": "/tmp/horusec-2022-01-13-11-38-45.log",
+  "horusec_api_uri": "http://0.0.0.0:8000",
+  "repository_authorization": "00000000-0000-0000-0000-000000000000",
+  "cert_path": "",
+  "repository_name": "phoenix",
+  "print_output_type": "",
+  "json_output_file_path": "",
+  "project_path": "/home/phoenix/samplecode/testkotlin/samples-kotlin",
+  "custom_rules_path": "",
+  "container_bind_project_path": "",
+  "timeout_in_seconds_request": 300,
+  "timeout_in_seconds_analysis": 600,
+  "monitor_retry_in_seconds": 15,
+  "return_error_if_found_vulnerability": false,
+  "enable_git_history_analysis": false,
+  "cert_insecure_skip_verify": false,
+  "enable_commit_author": false,
+  "disable_docker": false,
+  "enable_information_severity": true,
+  "enable_owasp_dependency_check": false,
+  "enable_shell_check": false,
+  "severities_to_ignore": [
+    "INFO"
+  ],
+  "files_or_paths_to_ignore": [
+    "*tmp*",
+    "**/.vscode/**"
+  ],
+  "false_positive_hashes": null,
+  "risk_accept_hashes": null,
+  "show_vulnerabilities_types": [
+    "Vulnerability"
+  ],
+  "tools_config": {
+    "Bandit": {
+      "istoignore": false
+    },
+    "Brakeman": {
+      "istoignore": false
+    },
+    "BundlerAudit": {
+      "istoignore": false
+    },
+    "Checkov": {
+      "istoignore": false
+    },
+    "DotnetCli": {
+      "istoignore": false
+    },
+    "Flawfinder": {
+      "istoignore": false
+    },
+    "GitLeaks": {
+      "istoignore": false
+    },
+    "GoSec": {
+      "istoignore": false
+    },
+    "HorusecEngine": {
+      "istoignore": false
+    },
+    "MixAudit": {
+      "istoignore": false
+    },
+    "Nancy": {
+      "istoignore": false
+    },
+    "NpmAudit": {
+      "istoignore": false
+    },
+    "OwaspDependencyCheck": {
+      "istoignore": false
+    },
+    "PhpCS": {
+      "istoignore": false
+    },
+    "Safety": {
+      "istoignore": false
+    },
+    "SecurityCodeScan": {
+      "istoignore": false
+    },
+    "Semgrep": {
+      "istoignore": false
+    },
+    "ShellCheck": {
+      "istoignore": false
+    },
+    "Sobelow": {
+      "istoignore": false
+    },
+    "TfSec": {
+      "istoignore": false
+    },
+    "Trivy": {
+      "istoignore": false
+    },
+    "YarnAudit": {
+      "istoignore": false
+    }
+  },
+  "headers": {},
+  "work_dir": {
+    "go": [],
+    "csharp": [],
+    "ruby": [],
+    "python": [],
+    "java": [],
+    "kotlin": [],
+    "javaScript": [],
+    "leaks": [],
+    "hcl": [],
+    "php": [],
+    "c": [],
+    "yaml": [],
+    "generic": [],
+    "elixir": [],
+    "shell": [],
+    "dart": [],
+    "nginx": []
+  },
+  "custom_images": {
+    "c": "",
+    "csharp": "",
+    "elixir": "",
+    "generic": "",
+    "go": "",
+    "hcl": "",
+    "javascript": "",
+    "leaks": "",
+    "php": "",
+    "python": "",
+    "ruby": "",
+    "shell": ""
+  },
+  "version": "v2.6.9"
+} 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/HEAD] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/branches] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/config] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/description] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/applypatch-msg.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/commit-msg.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/fsmonitor-watchman.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/post-update.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/pre-applypatch.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/pre-commit.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/pre-merge-commit.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/pre-push.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/pre-rebase.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/pre-receive.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/prepare-commit-msg.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/hooks/update.sample] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/index] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/info] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/info/exclude] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/logs] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/logs/HEAD] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/logs/refs] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/logs/refs/heads] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/logs/refs/heads/master] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/logs/refs/remotes] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/logs/refs/remotes/origin] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/logs/refs/remotes/origin/HEAD] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/objects] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/objects/info] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/objects/pack] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/objects/pack/pack-3c90b93437b73fabaffeba57276a6dd0cc7ff62e.idx] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/objects/pack/pack-3c90b93437b73fabaffeba57276a6dd0cc7ff62e.pack] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/packed-refs] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/refs] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/refs/heads] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/refs/heads/master] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/refs/remotes] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/refs/remotes/origin] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/refs/remotes/origin/HEAD] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/.git/refs/tags] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Accounts/supplychain/Business Flow.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Accounts/tictacthor/clients/src/main/resources/static/corda_logo.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/client/src/main/resources/public/img/Mona_Lisa.jpg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/client/src/main/resources/public/img/The_Last_Supper.jpg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/client/src/main/resources/public/img/The_Scary_Night.jpg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/client/src/main/resources/public/img/The_Scream.jpg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/client/src/main/resources/public/img/auction-demo-banner.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/client/src/main/resources/public/img/corda.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/client/src/main/resources/public/img/spinner.svg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/snaps/Bid.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/snaps/CashIssue.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/snaps/CreateAuction.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/snaps/Settle.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/snaps/landing.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/snaps/setup.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/duediligence-cordapp/due-d diagram.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/webapp/public/favicon.ico] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/webapp/public/img/reindeer-flying.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/webapp/src/Components/img/reindeer-flying.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/webapp/src/Components/img/secret_corda.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/snakesandladders-cordapp/clients/src/main/resources/public/img/corda.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/snakesandladders-cordapp/clients/src/main/resources/public/img/game-board.jpg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/snakesandladders-cordapp/clients/src/main/resources/public/img/snl-banner.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/snakesandladders-cordapp/clients/src/main/resources/public/img/spinner.svg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/snakesandladders-cordapp/snaps/Create_Player.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/snakesandladders-cordapp/snaps/game.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/cordapp-example/.idea/compiler.xml] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/cordapp-example/.idea/gradle.xml] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/cordapp-example/.idea/jarRepositories.xml] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/cordapp-example/.idea/misc.xml] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/cordapp-example/.idea/vcs.xml] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/cordapp-example/.idea/workspace.xml] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/BusinessNetworks/insurancebusinessnetwork/MockDiagram.jpeg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/attachment-blacklist/clients/src/main/resources/static/JDBC-url.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/attachment-blacklist/clients/src/main/resources/static/Postman_screenshot.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/attachment-sendfile/graph.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/contractsdk-recordplayers/cordaphone.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/cordaService-autopayroll/webpic/Business Logic.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/postgres-cordapp/img/config-1.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/postgres-cordapp/img/config-2.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/queryableState-carinsurance/clients/src/main/resources/static/JDBC-url.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/queryableState-carinsurance/clients/src/main/resources/static/Postman_screenshot.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Features/schedulableState-heartbeat/heart.jpg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/bikemarket/diagram/pic1.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/stockpaydividend/diagrams/FlowDiagram.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/stockpaydividend/diagrams/FlowDiagram2.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/tokentofriend/clients/src/main/webapp/public/favicon.ico] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/tokentofriend/clients/src/main/webapp/public/logo192.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/tokentofriend/clients/src/main/webapp/public/logo512.png] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/tokentofriend/clients/src/main/webapp/src/img/logo.svg] 
+DEBU[0000] {HORUSEC_CLI} The file or folder was ignored to send analysis:[/home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/tokentofriend/diagram.png] 
+WARN[0000] {HORUSEC_CLI} When starting the analysis WE SKIP A TOTAL OF 92 FILES that are not considered to be analyzed. To see more details use flag --log-level=debug 
+
+WARN[0000] Horusec will return a timeout after 600 seconds. This time can be customized in the cli settings. 
+
+WARN[0000] {HORUSEC_CLI} PLEASE DON'T REMOVE ".horusec" FOLDER BEFORE THE ANALYSIS FINISH! Don’t worry, we’ll remove it after the analysis ends automatically! Project sent to folder in location: [/home/phoenix/samplecode/testkotlin/samples-kotlin/.horusec/9c789df4-b944-48fd-a652-88fc7f308eb2] 
+
+⣾ Scanning code ... DEBU[0000] {HORUSEC_CLI} Running HorusecEngine - YAML in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+DEBU[0000] {HORUSEC_CLI} Running HorusecEngine - Kotlin in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+DEBU[0000] {HORUSEC_CLI} Running HorusecEngine - Leaks in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+DEBU[0000] {HORUSEC_CLI} Running HorusecEngine - JavaScript in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+DEBU[0000] {HORUSEC_CLI} The tool was ignored for run in this analysis: OwaspDependencyCheck 
+DEBU[0000] {HORUSEC_CLI} Running Semgrep - Generic in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+DEBU[0000] {HORUSEC_CLI} Running Trivy - horuszup/horusec-generic:v1.1.0 in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+DEBU[0000] {HORUSEC_CLI} The tool was ignored for run in this analysis: ShellCheck 
+DEBU[0000] {HORUSEC_CLI} Running NpmAudit - JavaScript in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+DEBU[0000] {HORUSEC_CLI} Running YarnAudit - JavaScript in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+DEBU[0000] {HORUSEC_CLI} The workdir setup for run in path:[NpmAudit Advanced/secretsanta-cordapp/clients/src/main/webapp/] 
+DEBU[0000] Start run analysis 0/1[debug]                
+DEBU[0000] {HORUSEC_CLI} HorusecEngine - YAML is finished in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+⢿ Scanning code ... DEBU[0001] Start run analysis 0/1[debug]                
+⡿ Scanning code ... DEBU[0001] {HORUSEC_CLI} HorusecEngine - JavaScript is finished in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+⢿ Scanning code ... DEBU[0002] {HORUSEC_CLI} Docker create new container: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:650528cafd68b67148e0475cec501d069863b76a7696aa25da6017f4f9316b4d image:docker.io/horuszup/horusec-js:v1.0.0]] 
+DEBU[0002] {HORUSEC_CLI} Docker wait container up...[map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:650528cafd68b67148e0475cec501d069863b76a7696aa25da6017f4f9316b4d image:]] 
+DEBU[0002] {HORUSEC_CLI} Docker create new container: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:f3c85171db22c0a86431f81df577435b4e2f7dbfcc155484b6caf092f7bcd013 image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+DEBU[0002] {HORUSEC_CLI} Docker wait container up...[map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:f3c85171db22c0a86431f81df577435b4e2f7dbfcc155484b6caf092f7bcd013 image:]] 
+DEBU[0002] {HORUSEC_CLI} Docker create new container: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:c47c82fc2d2bb79691be8f4a911eccd414c9be33ef37e9fe723470a32b36cc8c image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+DEBU[0002] {HORUSEC_CLI} Docker wait container up...[map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:c47c82fc2d2bb79691be8f4a911eccd414c9be33ef37e9fe723470a32b36cc8c image:]] 
+⡿ Scanning code ... DEBU[0002] {HORUSEC_CLI} Docker create new container: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:5bce15949ffbb04826e1db0fe4c1ce40818e61535e5a2206b8e2c3e9b2a31122 image:docker.io/horuszup/horusec-js:v1.0.0]] 
+DEBU[0002] {HORUSEC_CLI} Docker wait container up...[map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:5bce15949ffbb04826e1db0fe4c1ce40818e61535e5a2206b8e2c3e9b2a31122 image:]] 
+⣟ Scanning code ... DEBU[0003] {HORUSEC_CLI} Docker read container output: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-js:v1.0.0]] 
+DEBU[0003] {HORUSEC_CLI} Docker Finished analysis with SUCCESS: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-js:v1.0.0]] 
+DEBU[0003] {HORUSEC_CLI} Something error went wrong in YarnAudit tool | analysisID -> 9c789df4-b944-48fd-a652-88fc7f308eb2 | output ->  - {HORUSEC_CLI} Error It looks like your project doesn't have a yarn.lock file. If you use Yarn to handle your dependencies, it would be a good idea to commit it so horusec can check for vulnerabilities 
+DEBU[0003] {HORUSEC_CLI} YarnAudit - JavaScript is finished in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+⣯ Scanning code ... DEBU[0003] {HORUSEC_CLI} Docker create new container: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:9d2431cb2e9fb41a53673183b20a064e490fb73f27edeafe6707a4f9b1ee5487 image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+DEBU[0003] {HORUSEC_CLI} Docker wait container up...[map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 containerId:9d2431cb2e9fb41a53673183b20a064e490fb73f27edeafe6707a4f9b1ee5487 image:]] 
+⣽ Scanning code ... DEBU[0007] Start run analysis 0/1[debug]                
+⡿ Scanning code ... DEBU[0007] {HORUSEC_CLI} HorusecEngine - Kotlin is finished in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+⣻ Scanning code ... DEBU[0009] {HORUSEC_CLI} Docker read container output: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+DEBU[0009] {HORUSEC_CLI} Docker Finished analysis with SUCCESS: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+DEBU[0009] {HORUSEC_CLI} Semgrep - Generic is finished in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+⣟ Scanning code ... DEBU[0009] {HORUSEC_CLI} Docker read container output: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-js:v1.0.0]] 
+DEBU[0009] {HORUSEC_CLI} Docker Finished analysis with SUCCESS: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-js:v1.0.0]] 
+DEBU[0009] {HORUSEC_CLI} NpmAudit - JavaScript is finished in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+⣻ Scanning code ... DEBU[0018] Start run analysis 0/1[debug]                
+⣻ Scanning code ... DEBU[0025] {HORUSEC_CLI} Docker read container output: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+⢿ Scanning code ... DEBU[0025] {HORUSEC_CLI} Docker Finished analysis with SUCCESS: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+⣻ Scanning code ... DEBU[0028] {HORUSEC_CLI} HorusecEngine - Leaks is finished in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+⣾ Scanning code ... DEBU[0107] {HORUSEC_CLI} Docker read container output: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+DEBU[0107] {HORUSEC_CLI} Docker Finished analysis with SUCCESS: [map[analysisId:9c789df4-b944-48fd-a652-88fc7f308eb2 image:docker.io/horuszup/horusec-generic:v1.1.0]] 
+DEBU[0107] {HORUSEC_CLI} Trivy - horuszup/horusec-generic:v1.1.0 is finished in analysisID: [9c789df4-b944-48fd-a652-88fc7f308eb2] 
+
+
+==================================================================================
+
+HORUSEC ENDED THE ANALYSIS WITH STATUS OF "error" AND WITH THE FOLLOWING RESULTS:
+
+==================================================================================
+
+Analysis StartedAt: 2022-01-13 11:38:46
+Analysis FinishedAt: 2022-01-13 11:40:33
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 13
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/contractsdk-recordplayers/clients/src/main/kotlin/net/corda/samples/contractsdk/webserver/NodeRPCConnection.kt
+Code: private const val CORDA_USER_PASSWORD = "config.rpc.password"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: 96b7cb76990a5598f1d8c23a6bdb352c3260faaed721640b236008a6fde1f48b
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 13
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Accounts/tictacthor/clients/src/main/kotlin/net/corda/samples/tictacthor/webserver/NodeRPCConnection.kt
+Code: private const val CORDA_USER_PASSWORD = "config.rpc.password"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: 496795b9a8a91f23569a053238f3bafbf5fd6d5286d8d5639b5e158f4f6a4b3d
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 13
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/postgres-cordapp/clients/src/main/kotlin/net/corda/samples/postgres/webserver/NodeRPCConnection.kt
+Code: private const val CORDA_USER_PASSWORD = "config.rpc.password"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: 4c90ca9410998e98c80b776bf45bc7931fa5d8ac05f0dfb1701891eb200e694e
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 14
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/snakesandladders-cordapp/clients/src/main/kotlin/net/corda/samples/snl/webserver/NodeRPCConnection.kt
+Code: private const val CORDA_USER_PASSWORD = "config.rpc.password"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: bb96e506b792ae389850e74147608b888585f6916b754dd99fc8c5692e744ae8
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 13
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/queryableState-carinsurance/clients/src/main/kotlin/net/corda/samples/carinsurance/server/NodeRPCConnection.kt
+Code: private const val CORDA_USER_PASSWORD = "config.rpc.password"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: c2bc045cd476b9389fe44010f4a026b1b49f634c41804446752dd51ae4519721
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 13
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/obligation-cordapp/clients/src/main/kotlin/net/corda/samples/obligation/server/NodeRPCConnection.kt
+Code: private const val CORDA_USER_PASSWORD = "config.rpc.password"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: a0c822a8a1074d3e1382e6c41e5eb833c69992b96898a1a79bdb2d924c3aed21
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2309
+Column: 498
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/attachment-blacklist/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 922fe91e2b4106635bbc16da0c6817ff0c647d8cdf9dde739a4332bd5d032628
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4420
+Column: 3934
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/attachment-blacklist/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKC��L�H�@F�F���
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 84121d94742aac126c2c7e8589a99a886fe399f2e2cfad00774e90483c2a9983
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 13
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/cordapp-example/clients/src/main/kotlin/net/corda/samples/example/webserver/NodeRPCConnection.kt
+Code: private const val CORDA_USER_PASSWORD = "config.rpc.password"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: b39ed01e9bbbc7d9a998c00a69e35d236d53d43382d60f39eaa93a9f3f1be05f
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2309
+Column: 498
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/schedulableState-heartbeat/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: eeb7344c7322de3912b3e60037e8d607222467e6643d2a44aecf31f89a0a023d
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4420
+Column: 3934
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/schedulableState-heartbeat/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKC��L�H�@F�F���
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: c5e8f2cb9ab6258abd75bf5d37b5982c551f92329cf1ec83fbc466352a79aeb6
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2309
+Column: 498
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/oracle-primenumber/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: a4e20ad97c30005fbe82d6fdb4a587c0d5c39142aaf71f3292eb072183cccd9e
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4420
+Column: 3934
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/oracle-primenumber/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKC��L�H�@F�F���
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 0a42cc6499723e32e8a84803ed43c525983d1ea9227dcf62e74ace44a9d4fc31
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 178
+Column: 32
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/kotlin/net/corda/samples/secretsanta/webserver/Controller.kt
+Code: val SENDGRID_API_KEY = "SG.xxxxxx_xxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxx_xxxxxxx"
+RuleID: HS-LEAKS-20
+Details: SendGrid API Key
+When use SendGrid API Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 74d0210c03d7d918aedb0056fcc2a6bc8eb4be2b256b4659f176e1ceff66ad45
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 179
+Column: 33
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/kotlin/net/corda/samples/secretsanta/webserver/Controller.kt
+Code: if (SENDGRID_API_KEY == "SG.xxxxxx_xxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxx_xxxxxxx") {
+RuleID: HS-LEAKS-20
+Details: SendGrid API Key
+When use SendGrid API Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 52a5de00bfed17df7a961b3bbfef7ccff78339e4ecb1a61f9ba978938c778384
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 13
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/kotlin/net/corda/samples/secretsanta/webserver/NodeRPCConnection.kt
+Code: private const val CORDA_USER_PASSWORD = "config.rpc.password"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: 048b723fd7d613fb1c2183f4bb60424f11df93fd0f677aca91656e8a0bb78ad5
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3017
+Column: 1809
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Accounts/supplychain/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 4f42fefd4cbacfb22721f552c372b1dc2d4be2e360d1963ca8bc2d8b78cfe6b1
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4359
+Column: 2774
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Accounts/supplychain/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKR�I?�-��E#�
+                                                                 c
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 41ccd9defac0f2058da4ae0944ecdfeaaa5b0961bf1eb446383361d44128c668
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2309
+Column: 498
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/referenceStates-sanctionsBody/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 51cc367a441473315199b027e6391c6337ada3adb57e744163dd3555dce4bd56
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4420
+Column: 3934
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Features/referenceStates-sanctionsBody/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKC��L�H�@F�F���
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 5831a0e70e7936960f7abad929a9e02ae7614a7640567d3a723c0f7885f92592
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3017
+Column: 1809
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/obligation-cordapp/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 49f2211d7ec5dca5f92f386d10026506ab9d4acfc447fd329acf7194d59359ea
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4359
+Column: 2774
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/obligation-cordapp/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKR�I?�-��E#�
+                                                                 c
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 3a190c3507b5ec4d8dd9db2d11bb99bcf2439132f46bfc082d2447c49ffb726f
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2309
+Column: 498
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/negotiation-cordapp/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 88bab9ed6a02320d5e0b1fef9d92a2440b8663cb3422c1cc4beff0cfbd73ae97
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4420
+Column: 3934
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/negotiation-cordapp/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKC��L�H�@F�F���
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 13dfb1d25295b07d633e2351e6af8c876ec4818d687a60adf644cecb8e03446e
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2309
+Column: 498
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/flow-database-access/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 990540ce2471e7640158d123a6bb0ea0a13488a7f2202cae379817c3c896cbf9
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4420
+Column: 3934
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/flow-database-access/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKC��L�H�@F�F���
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 12470e2c78c1824b2ed76a9e67df46698a5bcab8c1aa151f241ddfa1cf964a25
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 14
+Column: 8
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/ping-pong/client/src/main/kotlin/net/corda/samples/pingpong/Client.kt
+Code: val RPC_PASSWORD = "test"
+RuleID: HS-LEAKS-26
+Details: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+Type: Vulnerability
+ReferenceHash: 964c0c9188ae6c71d02c218f241d6160d866c5eadcbab57740acbb36fd52bb0a
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2309
+Column: 498
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/flow-http-access/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: db9ee40a266263443d168fa423bb31dcbf5f37c98db3c3f0075cf5db36213680
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4420
+Column: 3934
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/flow-http-access/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKC��L�H�@F�F���
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 20b490974939f2830bd65ad9911b242bd07a85e08531ef961cc4a8e9dd7032a7
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2309
+Column: 498
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/ping-pong/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.class�V�NA=��~�������Ң]+j	�%$M�
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: ad3410c3c5ccfa7f0abba2438d752957b6407e2deb818c227805eb1931c7af88
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4420
+Column: 3934
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/ping-pong/lib/quasar.jar
+Code: LinkedIntQueue$IntLinkedQueueIterator.classPKC��L�H�@F�F���
+RuleID: HS-LEAKS-10
+Details: LinkedIn Secret Key
+When use LinkedIn Secret Key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+Type: Vulnerability
+ReferenceHash: 044d6de296d11fcc6498fd0ad28f683c79fab3c68529c8fdbdf5370a7c06ad89
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 104
+Column: 9
+SecurityTool: HorusecEngine
+Confidence: HIGH
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/webapp/src/Components/CheckSantaGame/CheckSantaGame.js
+Code: alert(secret_msg);
+RuleID: HS-JAVASCRIPT-16
+Details: Alert statements should not be used
+alert(...) as well as confirm(...) and prompt(...) can be useful for debugging during development, but in production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. For more information checkout the CWE-489 (https://cwe.mitre.org/data/definitions/489.html) advisory.
+Type: Vulnerability
+ReferenceHash: 41166c7065798428fe79de426bf8c1ac47935629e1b0a9f7e08fe0b5994d77ef
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 108
+Column: 9
+SecurityTool: HorusecEngine
+Confidence: HIGH
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/webapp/src/Components/CreateSantaGame/CreateSantaGame.js
+Code: alert(secret_msg);
+RuleID: HS-JAVASCRIPT-16
+Details: Alert statements should not be used
+alert(...) as well as confirm(...) and prompt(...) can be useful for debugging during development, but in production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. For more information checkout the CWE-489 (https://cwe.mitre.org/data/definitions/489.html) advisory.
+Type: Vulnerability
+ReferenceHash: 08bf1c0e107673f56844d63ffc820575e2adc1880b37623272d0f2351e853eb6
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 8
+Column: 17
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Accounts/tictacthor/clients/src/main/resources/static/index.js
+Code: buttons[i].addEventListener("click", function() {eventSubmitTurn(obj);}, false);
+RuleID: HS-JAVASCRIPT-11
+Details: Origins should be verified during cross-origin communications
+Browsers allow message exchanges between Window objects of different origins. Because any window can send / receive messages from other window it is important to verify the sender's / receiver's identity: When sending message with postMessage method, the identity's receiver should be defined (the wildcard keyword (*) should not be used).
+When receiving message with message event, the sender's identity should be verified using the origin and possibly source properties. For more information checkout the OWASP A2:2017 (https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication) and (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) advisory.
+Type: Vulnerability
+ReferenceHash: fcaaefac10201e85001af713831de1ff6aebbe589b92b71ca7e94cce9ae530ef
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 34
+Column: 10
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/secretsanta-cordapp/clients/src/main/webapp/src/serviceWorker.js
+Code: window.addEventListener('load', () => {
+RuleID: HS-JAVASCRIPT-11
+Details: Origins should be verified during cross-origin communications
+Browsers allow message exchanges between Window objects of different origins. Because any window can send / receive messages from other window it is important to verify the sender's / receiver's identity: When sending message with postMessage method, the identity's receiver should be defined (the wildcard keyword (*) should not be used).
+When receiving message with message event, the sender's identity should be verified using the origin and possibly source properties. For more information checkout the OWASP A2:2017 (https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication) and (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) advisory.
+Type: Vulnerability
+ReferenceHash: 5891794c90f9c5ad82ae9c4fe262541a47beddaa400e3c17af35dac86c5ec989
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 45
+Column: 13
+SecurityTool: HorusecEngine
+Confidence: HIGH
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Tokens/tokentofriend/clients/src/main/webapp/src/component/App.js
+Code: u have just created a token for your friend! He will be able to collect the secret message using the
+RuleID: HS-JAVASCRIPT-16
+Details: Alert statements should not be used
+alert(...) as well as confirm(...) and prompt(...) can be useful for debugging during development, but in production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. For more information checkout the CWE-489 (https://cwe.mitre.org/data/definitions/489.html) advisory.
+Type: Vulnerability
+ReferenceHash: a02016ce2abe26c78e699252a1179502decad6b5e2448c4c9cd5ffcbb5943f42
+
+==================================================================================
+
+Language: JavaScript
+Severity: MEDIUM
+Line: 0
+Column: 0
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Advanced/auction-cordapp/client/src/main/resources/public/js/moment.min.js
+Code: 
+RuleID: HS-JAVASCRIPT-26
+Details: Insecure download of executable file
+Downloading executables or other sensitive files over an unencrypted connection can leave a server open to man-in-the-middle attacks (MITM). Such an attack can allow an attacker to insert arbitrary content into the downloaded file, and in the worst case, allow the attacker to execute arbitrary code on the vulnerable system.. For more information checkout the CWE-829 (https://cwe.mitre.org/data/definitions/829.html) advisory.
+Type: Vulnerability
+ReferenceHash: 05f056236a7c71de41cc4f4b5183cafb1d5675b61d4c179571ef9740fd7b6298
+
+==================================================================================
+
+Language: Kotlin
+Severity: MEDIUM
+Line: 91
+Column: 132
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/phoenix/samplecode/testkotlin/samples-kotlin/Basic/cordapp-example/clients/src/main/kotlin/net/corda/samples/example/webserver/Controller.kt
+Code: oded"])
+RuleID: HS-JVM-38
+Details: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+Type: Vulnerability
+ReferenceHash: 805ff59d169ca29c12979625b9a7e5a3b7157f20706dc748e28d24bc24706afd
+
+==================================================================================
+
+In this analysis, a total of 38 possible vulnerabilities were found and we classified them into:
+Total of Vulnerability CRITICAL is: 31
+Total of Vulnerability HIGH is: 5
+Total of Vulnerability MEDIUM is: 2
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 96b7cb76990a5598f1d8c23a6bdb352c3260faaed721640b236008a6fde1f48b 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 496795b9a8a91f23569a053238f3bafbf5fd6d5286d8d5639b5e158f4f6a4b3d 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 4c90ca9410998e98c80b776bf45bc7931fa5d8ac05f0dfb1701891eb200e694e 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: bb96e506b792ae389850e74147608b888585f6916b754dd99fc8c5692e744ae8 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: c2bc045cd476b9389fe44010f4a026b1b49f634c41804446752dd51ae4519721 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: a0c822a8a1074d3e1382e6c41e5eb833c69992b96898a1a79bdb2d924c3aed21 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 922fe91e2b4106635bbc16da0c6817ff0c647d8cdf9dde739a4332bd5d032628 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 84121d94742aac126c2c7e8589a99a886fe399f2e2cfad00774e90483c2a9983 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: b39ed01e9bbbc7d9a998c00a69e35d236d53d43382d60f39eaa93a9f3f1be05f 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: eeb7344c7322de3912b3e60037e8d607222467e6643d2a44aecf31f89a0a023d 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: c5e8f2cb9ab6258abd75bf5d37b5982c551f92329cf1ec83fbc466352a79aeb6 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: a4e20ad97c30005fbe82d6fdb4a587c0d5c39142aaf71f3292eb072183cccd9e 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 0a42cc6499723e32e8a84803ed43c525983d1ea9227dcf62e74ace44a9d4fc31 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 74d0210c03d7d918aedb0056fcc2a6bc8eb4be2b256b4659f176e1ceff66ad45 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 52a5de00bfed17df7a961b3bbfef7ccff78339e4ecb1a61f9ba978938c778384 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 048b723fd7d613fb1c2183f4bb60424f11df93fd0f677aca91656e8a0bb78ad5 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 4f42fefd4cbacfb22721f552c372b1dc2d4be2e360d1963ca8bc2d8b78cfe6b1 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 41ccd9defac0f2058da4ae0944ecdfeaaa5b0961bf1eb446383361d44128c668 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 51cc367a441473315199b027e6391c6337ada3adb57e744163dd3555dce4bd56 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 5831a0e70e7936960f7abad929a9e02ae7614a7640567d3a723c0f7885f92592 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 49f2211d7ec5dca5f92f386d10026506ab9d4acfc447fd329acf7194d59359ea 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 3a190c3507b5ec4d8dd9db2d11bb99bcf2439132f46bfc082d2447c49ffb726f 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 88bab9ed6a02320d5e0b1fef9d92a2440b8663cb3422c1cc4beff0cfbd73ae97 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 13dfb1d25295b07d633e2351e6af8c876ec4818d687a60adf644cecb8e03446e 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 990540ce2471e7640158d123a6bb0ea0a13488a7f2202cae379817c3c896cbf9 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 12470e2c78c1824b2ed76a9e67df46698a5bcab8c1aa151f241ddfa1cf964a25 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 964c0c9188ae6c71d02c218f241d6160d866c5eadcbab57740acbb36fd52bb0a 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: db9ee40a266263443d168fa423bb31dcbf5f37c98db3c3f0075cf5db36213680 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 20b490974939f2830bd65ad9911b242bd07a85e08531ef961cc4a8e9dd7032a7 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: ad3410c3c5ccfa7f0abba2438d752957b6407e2deb818c227805eb1931c7af88 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 044d6de296d11fcc6498fd0ad28f683c79fab3c68529c8fdbdf5370a7c06ad89 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 41166c7065798428fe79de426bf8c1ac47935629e1b0a9f7e08fe0b5994d77ef 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 08bf1c0e107673f56844d63ffc820575e2adc1880b37623272d0f2351e853eb6 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: fcaaefac10201e85001af713831de1ff6aebbe589b92b71ca7e94cce9ae530ef 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 5891794c90f9c5ad82ae9c4fe262541a47beddaa400e3c17af35dac86c5ec989 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: a02016ce2abe26c78e699252a1179502decad6b5e2448c4c9cd5ffcbb5943f42 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 05f056236a7c71de41cc4f4b5183cafb1d5675b61d4c179571ef9740fd7b6298 
+DEBU[0107] {HORUSEC_CLI} Vulnerability Hash expected to be FIXED: 805ff59d169ca29c12979625b9a7e5a3b7157f20706dc748e28d24bc24706afd 
+
+==================================================================================
+
+
+WARN[0107] {HORUSEC_CLI} No authorization token was found, your code it is not going to be sent to horusec. Please enter a token with the -a flag to configure and save your analysis 
+
+WARN[0107] [HORUSEC] 38 VULNERABILITIES WERE FOUND IN YOUR CODE SENT TO HORUSEC, TO SEE MORE DETAILS USE THE LOG LEVEL AS DEBUG AND TRY AGAIN 
+
+
+==================================================================================
+
+WARN[0107] {HORUSEC_CLI} During execution we found some problems: 
+
+WARN[0107] {HORUSEC_CLI} Error It looks like your project doesn't have a yarn.lock file. If you use Yarn to handle your dependencies, it would be a good idea to commit it so horusec can check for vulnerabilities 
