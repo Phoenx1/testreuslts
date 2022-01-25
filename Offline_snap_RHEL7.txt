@@ -1,0 +1,43 @@
+libzstd-1.5.1-4.el7.x86_64.rpm
+URL: https://dl.fedoraproject.org/pub/epel/7Server/x86_64/Packages/l/libzstd-1.5.1-4.el7.x86_64.rpm
+License : BSD and GPLv2
+
+selinux-policy-3.13.1-268.el7_9.2.noarch.rpm
+URL: http://mirror.centos.org/centos/7/updates/x86_64/Packages/selinux-policy-3.13.1-268.el7_9.2.noarch.rpm
+License : GPLv2+
+
+selinux-policy-targeted-3.13.1-268.el7_9.2.noarch.rpm
+URL: http://mirror.centos.org/centos/7/updates/x86_64/Packages/selinux-policy-targeted-3.13.1-268.el7_9.2.noarch.rpm
+License : GPLv2+
+
+selinux-policy-minimum-3.13.1-268.el7_9.2.noarch.rpm
+URL: http://mirror.centos.org/centos/7/updates/x86_64/Packages/selinux-policy-minimum-3.13.1-268.el7_9.2.noarch.rpm
+License : GPLv2+
+
+snap-confine-2.54.1-1.el7.x86_64.rpm
+URL: https://dl.fedoraproject.org/pub/epel/7Server/x86_64/Packages/s/snap-confine-2.54.1-1.el7.x86_64.rpm
+License : GPLv3
+
+snapd-selinux-2.54.1-1.el7.noarch.rpm
+URL: https://dl.fedoraproject.org/pub/epel/7Server/x86_64/Packages/s/snapd-selinux-2.54.1-1.el7.noarch.rpm
+License : GPLv2+
+
+squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm
+URL: 	http://mirror.centos.org/centos/7/os/x86_64/Packages/squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm
+License : GPLv2+
+
+squashfuse-0.1.102-1.el7.x86_64.rpm
+URL: https://dl.fedoraproject.org/pub/epel/7Server/x86_64/Packages/s/squashfuse-0.1.102-1.el7.x86_64.rpm
+License : BSD
+
+squashfuse-libs-0.1.102-1.el7.x86_64.rpm
+URL: https://dl.fedoraproject.org/pub/epel/7Server/x86_64/Packages/s/squashfuse-libs-0.1.102-1.el7.x86_64.rpm
+License : BSD
+
+libselinux-utils-2.5-15.el7.x86_64.rpm
+URL: http://mirror.centos.org/centos/7/os/x86_64/Packages/libselinux-utils-2.5-15.el7.x86_64.rpm
+License : Public Domain
+
+policycoreutils-2.5-34.el7.x86_64.rpm
+URL: http://mirror.centos.org/centos/7/os/x86_64/Packages/policycoreutils-2.5-34.el7.x86_64.rpm
+License : GPLv2
