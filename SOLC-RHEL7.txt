@@ -1,0 +1,329 @@
+[phoenix@localhost packages]$ ls -l
+total 28684
+-rw-r--r--. 1 root root   350956 Jan 24 16:57 libzstd-1.5.1-4.el7.x86_64.rpm
+-rwxr-xr-x. 1 root root   509568 Jan 24 17:40 selinux-policy-3.13.1-268.el7_9.2.noarch.rpm
+-rwxr-xr-x. 1 root root  7335504 Jan 24 17:37 selinux-policy-targeted-3.13.1-268.el7_9.2.noarch.rpm
+-rw-r--r--. 1 root root  3428085 Jan 24 16:57 snap-confine-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root 17204445 Jan 24 16:57 snapd-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root   488277 Jan 24 16:57 snapd-selinux-2.54.1-1.el7.noarch.rpm
+-rw-r--r--. 1 root root    18514 Jan 24 16:57 squashfuse-0.1.102-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root    24562 Jan 24 16:57 squashfuse-libs-0.1.102-1.el7.x86_64.rpm
+[phoenix@localhost packages]$ rpm -i snapd-selinux-2.54.1-1.el7.noarch.rpm 
+warning: snapd-selinux-2.54.1-1.el7.noarch.rpm: Header V4 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+error: can't create transaction lock on /var/lib/rpm/.rpm.lock (Permission denied)
+[phoenix@localhost packages]$ su
+Password: 
+[root@localhost packages]# clear
+[root@localhost packages]# rpm -i snapd-selinux-2.54.1-1.el7.noarch.rpm 
+warning: snapd-selinux-2.54.1-1.el7.noarch.rpm: Header V4 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+[root@localhost packages]# ls -l
+total 28684
+-rw-r--r--. 1 root root   350956 Jan 24 16:57 libzstd-1.5.1-4.el7.x86_64.rpm
+-rwxr-xr-x. 1 root root   509568 Jan 24 17:40 selinux-policy-3.13.1-268.el7_9.2.noarch.rpm
+-rwxr-xr-x. 1 root root  7335504 Jan 24 17:37 selinux-policy-targeted-3.13.1-268.el7_9.2.noarch.rpm
+-rw-r--r--. 1 root root  3428085 Jan 24 16:57 snap-confine-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root 17204445 Jan 24 16:57 snapd-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root   488277 Jan 24 16:57 snapd-selinux-2.54.1-1.el7.noarch.rpm
+-rw-r--r--. 1 root root    18514 Jan 24 16:57 squashfuse-0.1.102-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root    24562 Jan 24 16:57 squashfuse-libs-0.1.102-1.el7.x86_64.rpm
+[root@localhost packages]# rpm -i snapd-2.54.1-1.el7.x86_64.rpm 
+warning: snapd-2.54.1-1.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+error: Failed dependencies:
+	squashfs-tools is needed by snapd-2.54.1-1.el7.x86_64
+	squashfuse is needed by snapd-2.54.1-1.el7.x86_64
+[root@localhost packages]# rpm -i squashfuse-0.1.102-1.el7.x86_64.rpm 
+warning: squashfuse-0.1.102-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+error: Failed dependencies:
+	libfuseprivate.so.0()(64bit) is needed by squashfuse-0.1.102-1.el7.x86_64
+	libsquashfuse.so.0()(64bit) is needed by squashfuse-0.1.102-1.el7.x86_64
+	libzstd.so.1()(64bit) is needed by squashfuse-0.1.102-1.el7.x86_64
+	squashfuse-libs(x86-64) = 0.1.102-1.el7 is needed by squashfuse-0.1.102-1.el7.x86_64
+[root@localhost packages]# rpm -i squashfuse-libs-0.1.102-1.el7.x86_64.rpm 
+warning: squashfuse-libs-0.1.102-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+[root@localhost packages]# rpm -ivh squashfuse-libs-0.1.102-1.el7.x86_64.rpm 
+warning: squashfuse-libs-0.1.102-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Preparing...                          ################################# [100%]
+	package squashfuse-libs-0.1.102-1.el7.x86_64 is already installed
+[root@localhost packages]# yum search libfuseprivate
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Warning: No matches found for: libfuseprivate
+No matches found
+[root@localhost packages]# rpm -ivh squashfuse-0.1.102-1.el7.x86_64.rpm 
+warning: squashfuse-0.1.102-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+error: Failed dependencies:
+	libzstd.so.1()(64bit) is needed by squashfuse-0.1.102-1.el7.x86_64
+[root@localhost packages]# yum install libzstd
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package libzstd.x86_64 0:1.5.1-4.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+============================================================================================================
+ Package                  Arch                    Version                       Repository             Size
+============================================================================================================
+Installing:
+ libzstd                  x86_64                  1.5.1-4.el7                   epel                  343 k
+
+Transaction Summary
+============================================================================================================
+Install  1 Package
+
+Total download size: 343 k
+Installed size: 959 k
+Is this ok [y/d/N]: y
+Downloading packages:
+warning: /var/cache/yum/x86_64/7Server/epel/packages/libzstd-1.5.1-4.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Public key for libzstd-1.5.1-4.el7.x86_64.rpm is not installed
+libzstd-1.5.1-4.el7.x86_64.rpm                                                       | 343 kB  00:00:00     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-14.noarch (installed)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Is this ok [y/N]: y
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+Warning: RPMDB altered outside of yum.
+  Installing : libzstd-1.5.1-4.el7.x86_64                                                               1/1 
+  Verifying  : libzstd-1.5.1-4.el7.x86_64                                                               1/1 
+
+Installed:
+  libzstd.x86_64 0:1.5.1-4.el7                                                                              
+
+Complete!
+[root@localhost packages]# rpm -ivh squashfuse-0.1.102-1.el7.x86_64.rpm 
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:squashfuse-0.1.102-1.el7         ################################# [100%]
+[root@localhost packages]# ls -l
+total 28684
+-rw-r--r--. 1 root root   350956 Jan 24 16:57 libzstd-1.5.1-4.el7.x86_64.rpm
+-rwxr-xr-x. 1 root root   509568 Jan 24 17:40 selinux-policy-3.13.1-268.el7_9.2.noarch.rpm
+-rwxr-xr-x. 1 root root  7335504 Jan 24 17:37 selinux-policy-targeted-3.13.1-268.el7_9.2.noarch.rpm
+-rw-r--r--. 1 root root  3428085 Jan 24 16:57 snap-confine-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root 17204445 Jan 24 16:57 snapd-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root   488277 Jan 24 16:57 snapd-selinux-2.54.1-1.el7.noarch.rpm
+-rw-r--r--. 1 root root    18514 Jan 24 16:57 squashfuse-0.1.102-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root    24562 Jan 24 16:57 squashfuse-libs-0.1.102-1.el7.x86_64.rpm
+[root@localhost packages]# rpm -ivh snapd-2.54.1-1.el7.x86_64.rpm 
+error: Failed dependencies:
+	squashfs-tools is needed by snapd-2.54.1-1.el7.x86_64
+[root@localhost packages]# yum search squashfs-tools
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+======================================= N/S matched: squashfs-tools ========================================
+squashfs-tools.x86_64 : Utility for the creation of squashfs filesystems
+
+  Name and summary matches only, use "search all" for everything.
+[root@localhost packages]# yum install squashfs-tools --downloadonly
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package squashfs-tools.x86_64 0:4.3-0.21.gitaae0aff4.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+============================================================================================================
+ Package                Arch           Version                             Repository                  Size
+============================================================================================================
+Installing:
+ squashfs-tools         x86_64         4.3-0.21.gitaae0aff4.el7            rhel-7-server-rpms         101 k
+
+Transaction Summary
+============================================================================================================
+Install  1 Package
+
+Total size: 101 k
+Installed size: 214 k
+Background downloading packages, then exiting:
+exiting because "Download Only" specified
+[root@localhost packages]# cd /var/cache/yum/x86_64/7Server/epel/packages/
+[root@localhost packages]# ls -l
+total 0
+[root@localhost packages]# yum help
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Usage: yum [options] COMMAND
+
+List of Commands:
+
+check          Check for problems in the rpmdb
+check-update   Check for available package updates
+clean          Remove cached data
+deplist        List a package's dependencies
+distribution-synchronization Synchronize installed packages to the latest available versions
+downgrade      downgrade a package
+erase          Remove a package or packages from your system
+fs             Acts on the filesystem data of the host, mainly for removing docs/lanuages for minimal hosts.
+fssnapshot     Creates filesystem snapshots, or lists/deletes current snapshots.
+groups         Display, or use, the groups information
+help           Display a helpful usage message
+history        Display, or use, the transaction history
+info           Display details about a package or group of packages
+install        Install a package or packages on your system
+langavailable  Check available languages
+langinfo       List languages information
+langinstall    Install appropriate language packs for a language
+langlist       List installed languages
+langremove     Remove installed language packs for a language
+list           List a package or groups of packages
+load-transaction load a saved transaction from filename
+makecache      Generate the metadata cache
+provides       Find what package provides the given value
+reinstall      reinstall a package
+repo-pkgs      Treat a repo. as a group of packages, so we can install/remove all of them
+repolist       Display the configured software repositories
+search         Search package details for the given string
+shell          Run an interactive yum shell
+swap           Simple way to swap packages, instead of using shell
+update         Update a package or packages on your system
+update-minimal Works like upgrade, but goes to the 'newest' package match which fixes a problem that affects your system
+updateinfo     Acts on repository update information
+upgrade        Update packages taking obsoletes into account
+version        Display a version for the machine and/or available repos.
+
+
+Options:
+  -h, --help            show this help message and exit
+  -t, --tolerant        be tolerant of errors
+  -C, --cacheonly       run entirely from system cache, don't update cache
+  -c [config file], --config=[config file]
+                        config file location
+  -R [minutes], --randomwait=[minutes]
+                        maximum command wait time
+  -d [debug level], --debuglevel=[debug level]
+                        debugging output level
+  --showduplicates      show duplicates, in repos, in list/search commands
+  -e [error level], --errorlevel=[error level]
+                        error output level
+  --rpmverbosity=[debug level name]
+                        debugging output level for rpm
+  -q, --quiet           quiet operation
+  -v, --verbose         verbose operation
+  -y, --assumeyes       answer yes for all questions
+  --assumeno            answer no for all questions
+  --version             show Yum version and exit
+  --installroot=[path]  set install root
+  --enablerepo=[repo]   enable one or more repositories (wildcards allowed)
+  --disablerepo=[repo]  disable one or more repositories (wildcards allowed)
+  -x [package], --exclude=[package]
+                        exclude package(s) by name or glob
+  --disableexcludes=[repo]
+                        disable exclude from main, for a repo or for
+                        everything
+  --disableincludes=[repo]
+                        disable includepkgs for a repo or for everything
+  --obsoletes           enable obsoletes processing during updates
+  --noplugins           disable Yum plugins
+  --nogpgcheck          disable gpg signature checking
+  --disableplugin=[plugin]
+                        disable plugins by name
+  --enableplugin=[plugin]
+                        enable plugins by name
+  --skip-broken         skip packages with depsolving problems
+  --color=COLOR         control whether color is used
+  --releasever=RELEASEVER
+                        set value of $releasever in yum config and repo files
+  --downloadonly        don't update, just download
+  --downloaddir=DLDIR   specifies an alternate directory to store packages
+  --setopt=SETOPTS      set arbitrary config and repo options
+  --bugfix              Include bugfix relevant packages, in updates
+  --security            Include security relevant packages, in updates
+  --advisory=ADVS, --advisories=ADVS
+                        Include packages needed to fix the given advisory, in
+                        updates
+  --bzs=BZS             Include packages needed to fix the given BZ, in
+                        updates
+  --cves=CVES           Include packages needed to fix the given CVE, in
+                        updates
+  --sec-severity=SEVS, --secseverity=SEVS
+                        Include security relevant packages matching the
+                        severity, in updates
+
+  Plugin Options:
+[root@localhost packages]# pwd
+/var/cache/yum/x86_64/7Server/epel/packages
+[root@localhost packages]# cd /home/phoenix/tools/snap/packages/
+[root@localhost packages]# pwd
+/home/phoenix/tools/snap/packages
+[root@localhost packages]# wget http://mirror.centos.org/centos/7/os/x86_64/Packages/squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm
+--2022-01-24 18:16:08--  http://mirror.centos.org/centos/7/os/x86_64/Packages/squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm
+Resolving mirror.centos.org (mirror.centos.org)... 64.251.25.238, 2604:1380:2:1800::1
+Connecting to mirror.centos.org (mirror.centos.org)|64.251.25.238|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 103552 (101K) [application/x-rpm]
+Saving to: ‘squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm’
+
+100%[==================================================================>] 103,552     --.-K/s   in 0.1s    
+
+2022-01-24 18:16:09 (852 KB/s) - ‘squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm’ saved [103552/103552]
+
+[root@localhost packages]# ls -l
+total 28788
+-rw-r--r--. 1 root root   350956 Jan 24 16:57 libzstd-1.5.1-4.el7.x86_64.rpm
+-rwxr-xr-x. 1 root root   509568 Jan 24 17:40 selinux-policy-3.13.1-268.el7_9.2.noarch.rpm
+-rwxr-xr-x. 1 root root  7335504 Jan 24 17:37 selinux-policy-targeted-3.13.1-268.el7_9.2.noarch.rpm
+-rw-r--r--. 1 root root  3428085 Jan 24 16:57 snap-confine-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root 17204445 Jan 24 16:57 snapd-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root   488277 Jan 24 16:57 snapd-selinux-2.54.1-1.el7.noarch.rpm
+-rw-r--r--. 1 root root   103552 Mar 14  2015 squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm
+-rw-r--r--. 1 root root    18514 Jan 24 16:57 squashfuse-0.1.102-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root    24562 Jan 24 16:57 squashfuse-libs-0.1.102-1.el7.x86_64.rpm
+[root@localhost packages]# rpm -ivh squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm 
+warning: squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:squashfs-tools-4.3-0.21.gitaae0af################################# [100%]
+[root@localhost packages]# rpm -ivh snapd-2.54.1-1.el7.x86_64.rpm 
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:snapd-2.54.1-1.el7               ################################# [100%]
+[root@localhost packages]# snap help
+The snap command lets you install, configure, refresh and remove snaps.
+Snaps are packages that work across many different Linux distributions,
+enabling secure delivery and operation of the latest apps and utilities.
+
+Usage: snap <command> [<options>...]
+
+Commonly used commands can be classified as follows:
+
+         Basics: find, info, install, remove, list
+        ...more: refresh, revert, switch, disable, enable, create-cohort
+        History: changes, tasks, abort, watch
+        Daemons: services, start, stop, restart, logs
+    Permissions: connections, interface, connect, disconnect
+  Configuration: get, set, unset, wait
+    App Aliases: alias, aliases, unalias, prefer
+        Account: login, logout, whoami
+      Snapshots: saved, save, check-snapshot, restore, forget
+         Device: model, reboot, recovery
+      ... Other: warnings, okay, known, ack, version
+    Development: download, pack, run, try
+
+For more information about a command, run 'snap help <command>'.
+For a short summary of all commands, run 'snap help --all'.
+[root@localhost packages]# snap download solc
+Fetching snap "solc"
+2022/01/24 18:17:45.080494 store_download.go:143: no host system xdelta3 available to use deltas
+Fetching assertions for "solc"
+Install the snap with:
+   snap ack solc_6746.assert
+   snap install solc_6746.snap
+[root@localhost packages]# ls -l
+total 64748
+-rw-r--r--. 1 root root   350956 Jan 24 16:57 libzstd-1.5.1-4.el7.x86_64.rpm
+-rwxr-xr-x. 1 root root   509568 Jan 24 17:40 selinux-policy-3.13.1-268.el7_9.2.noarch.rpm
+-rwxr-xr-x. 1 root root  7335504 Jan 24 17:37 selinux-policy-targeted-3.13.1-268.el7_9.2.noarch.rpm
+-rw-r--r--. 1 root root  3428085 Jan 24 16:57 snap-confine-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root 17204445 Jan 24 16:57 snapd-2.54.1-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root   488277 Jan 24 16:57 snapd-selinux-2.54.1-1.el7.noarch.rpm
+-rw-r--r--. 1 root root     5584 Jan 24 18:17 solc_6746.assert
+-rw-------. 1 root root 36814848 Jan 24 18:17 solc_6746.snap
+-rw-r--r--. 1 root root   103552 Mar 14  2015 squashfs-tools-4.3-0.21.gitaae0aff4.el7.x86_64.rpm
+-rw-r--r--. 1 root root    18514 Jan 24 16:57 squashfuse-0.1.102-1.el7.x86_64.rpm
+-rw-r--r--. 1 root root    24562 Jan 24 16:57 squashfuse-libs-0.1.102-1.el7.x86_64.rpm
